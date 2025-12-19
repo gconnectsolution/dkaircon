@@ -67,48 +67,46 @@ const galleryImages = [
     { src: "7.webp", alt: "AMC Service" },
     { src: "8.webp", alt: "Ventilation Systems" },
     
-    { src: "11.webp", alt: "HVAC Ducting" },
+    
     { src: "12.webp", alt: "Industrial Chiller" },
     { src: "13.webp", alt: "AMC Service" },
     { src: "14.webp", alt: "Ventilation Systems" },
     { src: "15.webp", alt: "AHU Maintenance" },
-    { src: "16.webp", alt: "AC Installation" },
+    
     { src: "17.webp", alt: "HVAC Ducting" },
     { src: "18.webp", alt: "Industrial Chiller" },
     { src: "19.webp", alt: "AMC Service" },
     { src: "20.webp", alt: "Ventilation Systems" },
     
     { src: "22.webp", alt: "AC Installation" },
-    { src: "23.webp", alt: "HVAC Ducting" },
+    
     { src: "24.webp", alt: "Industrial Chiller" },
     { src: "25.webp", alt: "AMC Service" },
     { src: "26.webp", alt: "Ventilation Systems" },
-    { src: "27.webp", alt: "AHU Maintenance" },
-    { src: "28.webp", alt: "AC Installation" },
+    
     { src: "29.webp", alt: "HVAC Ducting" },
     { src: "30.webp", alt: "Industrial Chiller" },
-    { src: "31.webp", alt: "AMC Service" },
+    
     { src: "32.webp", alt: "Ventilation Systems" },
     { src: "33.webp", alt: "AHU Maintenance" },
     { src: "34.webp", alt: "AC Installation" },
     { src: "35.webp", alt: "HVAC Ducting" },
     { src: "36.webp", alt: "Industrial Chiller" },
     { src: "37.webp", alt: "AMC Service" },
-    { src: "38.webp", alt: "Ventilation Systems" },
+   
     { src: "39.webp", alt: "AHU Maintenance" },
     { src: "40.webp", alt: "AC Installation" },
-    { src: "41.webp", alt: "HVAC Ducting" },
-    { src: "42.webp", alt: "Industrial Chiller" },
+    
     { src: "43.webp", alt: "AMC Service" },
-    { src: "44.webp", alt: "Ventilation Systems" },
+    
     { src: "45.webp", alt: "AHU Maintenance" },
-    { src: "46.webp", alt: "AC Installation" },
+    
     
     { src: "48.webp", alt: "Industrial Chiller" },
     
     { src: "50.webp", alt: "Ventilation Systems" },
     
-    { src: "52.webp", alt: "AC Installation" },
+    
     { src: "53.webp", alt: "HVAC Ducting" },
     { src: "54.webp", alt: "Industrial Chiller" },
     { src: "55.webp", alt: "AMC Service" }

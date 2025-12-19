@@ -46,7 +46,7 @@ const images = document.querySelectorAll(".gallery-img");
 
         serviceSelect.addEventListener('change', (e) => {
             const selectedService = e.target.value;
-            const phoneNumber = "9900917611";
+            const phoneNumber = "919900917611";
             const encodedMsg = encodeURIComponent(`Hello DK Aircon, I need a quote for: ${selectedService}.`);
             
             whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;

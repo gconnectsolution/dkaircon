@@ -41,16 +41,18 @@ const images = document.querySelectorAll(".gallery-img");
     if (e.target === lightbox) closeLightbox();
   });
 
-  const serviceSelect = document.querySelector('select');
-        const whatsappBtn = document.querySelector('.whatsapp-fab');
+const serviceSelect = document.querySelector("select");
+const whatsappBtn = document.querySelector(".whatsapp-fab");
 
-        serviceSelect.addEventListener('change', (e) => {
-            const selectedService = e.target.value;
-            const phoneNumber = "919900917611";
-            const encodedMsg = encodeURIComponent(`Hello DK Aircon, I need a quote for: ${selectedService}.`);
-            
-            whatsappBtn.href = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
-        });
+whatsappBtn.addEventListener("click", (e) => {
+  const selectedService = serviceSelect.value || "General Enquiry";
+  const phoneNumber = "919900917611"; // MUST include country code
+  const message = `Hello DK Aircon, I need a quote for: ${selectedService}.`;
+  const encodedMsg = encodeURIComponent(message);
+
+  const url = `https://wa.me/${phoneNumber}?text=${encodedMsg}`;
+});
+
         // Smooth scroll for nav links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {

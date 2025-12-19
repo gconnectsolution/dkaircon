@@ -1,0 +1,662 @@
+:root {
+  --blue: #0a4dbf;
+  --light: #eef4ff;
+  --dark: #081a3d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+}
+
+body {
+  color: #222;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.logo img{
+  height: 70px;
+  width: 150px;
+}
+
+.logo span {
+  color: var(--blue);
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.call-btn {
+  background: var(--blue);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.cta{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta h2{
+  color: #013c53;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  padding: 80px 40px;
+  background: linear-gradient(135deg, #f4f8ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.hero-points {
+  list-style: none;
+  margin-bottom: 30px;
+}
+
+.hero-points li {
+  margin-bottom: 8px;
+}
+
+.primary-btn {
+  background: var(--blue);
+  color: white;
+  padding: 14px 26px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.trust {
+  margin-left: 15px;
+  font-size: 0.9rem;
+}
+
+/* FORM CARD */
+.hero-card {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.hero-card h3 {
+  margin-bottom: 20px;
+}
+
+.hero-card input,
+.hero-card select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.hero-card button {
+  width: 100%;
+  padding: 14px;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+  padding: 90px 20px;
+  background: #f8fafc;
+}
+
+.testimonials-inner {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2.4rem;
+  color: #0a2540;
+  margin-bottom: 10px;
+}
+
+.testimonials .subtitle {
+  color: #555;
+  font-size: 1.05rem;
+  margin-bottom: 60px;
+}
+
+.testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.testimonial-card .quote {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.testimonial-card .quote::before {
+  content: "“";
+  font-size: 60px;
+  color: #007bff;
+  position: absolute;
+  top: -25px;
+  left: -10px;
+  opacity: 0.15;
+}
+
+.author strong {
+  display: block;
+  color: #0a2540;
+  font-weight: 600;
+}
+
+.author span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+/* GALLERY */
+/* --- GALLERY SECTION FIX --- */
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  height: 90vh; /* Exactly as requested */
+  display: flex;
+  flex-direction: column;
+  /* Adjust this value (70px) to match your actual header height */
+  scroll-margin-top: 75px; 
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0a2540;
+  margin-bottom: 15px;
+  flex-shrink: 0; /* Prevents the title from being squashed */
+}
+
+.gallery-viewer {
+  display: flex;
+  gap: 20px;
+  flex: 1; /* This makes the viewer fill the remaining 80vh */
+  min-height: 0; /* Critical flexbox fix to allow internal scrolling */
+  background: #fff;
+}
+
+/* --- SIDEBAR FIX --- */
+.thumbnail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 110px;
+  height: 100%; /* Fills the viewer height */
+  overflow-y: auto;
+  padding-right: 5px;
+  border-right: 1px solid #eee;
+  scrollbar-width: thin;
+}
+
+/* Standardizing the thumbnails */
+.gallery-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.6;
+  transition: 0.3s;
+  flex-shrink: 0; /* Keeps them from shrinking */
+}
+
+.gallery-img.active {
+  opacity: 1;
+  border: 2px solid #00a8e8;
+}
+
+/* --- MAIN DISPLAY FIX --- */
+.main-display {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-display img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Keeps the whole image visible */
+}
+
+/* --- RESPONSIVE FIXES --- */
+
+@media (max-width: 768px) {
+  .gallery {
+    height: auto; /* 80vh is often too small for mobile stacks */
+    min-height: 80vh; 
+  }
+
+  .gallery-viewer {
+    flex-direction: column;
+    height: 500px; /* Fixed height for mobile to keep sidebar visible */
+  }
+
+  .main-display {
+    flex: 3; /* Gives main image more space on mobile */
+  }
+
+  .thumbnail-sidebar {
+    flex-direction: row;
+    width: 100%;
+    height: 80px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    border-right: none;
+    border-top: 1px solid #eee;
+    flex: 1;
+  }
+
+  .gallery-img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  font-size: 50px;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.prev {
+  left: 30px;
+}
+
+.next {
+  right: 30px;
+}
+
+
+/* CONTACT */
+/* Footer Main Styles */
+.site-footer {
+    background-color: #1a1e23; /* Deep dark grey/blue */
+    color: #ffffff;
+    padding: 60px 20px 20px 20px;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+/* Typography */
+.footer-col h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #00a8e8; /* Bright cooling blue */
+}
+
+.footer-col h3 span {
+    color: #fff;
+    font-weight: 300;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00a8e8;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-col p {
+    line-height: 1.6;
+    color: #bdc3c7;
+    font-size: 0.95rem;
+}
+
+/* Links and Icons */
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-logo{
+  margin-left: 4%;
+}
+.footer-p{
+  margin-left: 4%;
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    color: #bdc3c7;
+}
+
+.footer-links i {
+    color: #00a8e8;
+    margin-right: 12px;
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+/* Bottom Copyright Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #34495e;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .site-footer {
+        text-align: left;
+        padding-top: 40px;
+    }
+}
+
+footer {
+  background: black;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+}
+
+
+.whatsapp-fab {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+        z-index: 3000;
+        text-decoration: none;
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .whatsapp-fab:hover {
+        transform: scale(1.1) translateY(-5px);
+        background-color: #128c7e;
+    }
+
+    /* Eye-catching pulse effect */
+    .whatsapp-fab::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #25d366;
+        border-radius: 50%;
+        z-index: -1;
+        animation: pulse-green 2s infinite;
+    }
+
+    @keyframes pulse-green {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* Tooltip for Desktop */
+    .fab-tooltip {
+        position: absolute;
+        right: 80px;
+        background: #333;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        pointer-events: none;
+    }
+
+    .whatsapp-fab:hover .fab-tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 768px) {
+        .whatsapp-fab {
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            font-size: 28px;
+        }
+        .fab-tooltip { display: none; } /* Hide tooltip on touch devices */
+    }/* --- GLOBAL RESPONSIVE FIXES --- */
+
+/* 1. Header Adjustments */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .logo img { height: 50px; width: auto; }
+  nav { order: 3; width: 100%; text-align: center; padding: 10px 0; }
+  nav a { margin: 0 8px; font-size: 0.9rem; }
+  .call-btn { font-size: 0.8rem; padding: 8px 12px; }
+}
+
+/* 2. Hero Section (Stacking for Tablet & Mobile) */
+@media (max-width: 992px) {
+  .hero {
+    grid-template-columns: 1fr; /* Stack columns */
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-points { 
+    display: inline-block; 
+    text-align: left; 
+    margin: 0 auto 30px; 
+  }
+  .hero-right { margin-top: 30px; }
+  .hero-card { max-width: 500px; margin: 0 auto; }
+}
+
+/* 3. Gallery Fix (Crucial) */
+.main-display {
+  flex: 1; 
+  position: relative;
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  /* REMOVED: height 70% and width 60% which was breaking the layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 1024px) {
+  /* iPad/Tablet Portrait */
+  .gallery-viewer { height: 500px; }
+  .thumbnail-sidebar { width: 100px; }
+}
+
+@media (max-width: 768px) {
+  /* Mobile */
+  .gallery h2 { font-size: 1.8rem; }
+  .gallery-viewer {
+    flex-direction: column-reverse; /* Main image on top, thumbs bottom */
+    height: auto;
+    gap: 10px;
+  }
+  .thumbnail-sidebar {
+    flex-direction: row; 
+    width: 100%;
+    height: 80px;
+    border-right: none;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    overflow-x: auto; /* Horizontal scroll for thumbs on mobile */
+    overflow-y: hidden;
+  }
+  .gallery-img { width: 60px; height: 60px; flex-shrink: 0; }
+  .main-display { height: 300px; width: 100%; }
+}
+
+/* 4. Testimonials Fix */
+@media (max-width: 480px) {
+  .testimonial-list { grid-template-columns: 1fr; }
+  .testimonial-card { padding: 20px; }
+  .testimonials h2 { font-size: 1.8rem; }
+}
+
+/* 5. Footer Fix */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-links li { justify-content: center; }
+  .footer-col h4::after { left: 50%; transform: translateX(-50%); } /* Center underline if using one */
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+@media (max-width: 768px) {
+  .map-container {
+    padding-bottom: 75%; /* Taller map for mobile */
+  }
+}
